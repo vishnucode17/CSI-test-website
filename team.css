@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 body{
     margin:0;
 }
@@ -170,8 +171,131 @@ video{
 #line3{
     background:grey;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:space-around;
+    align-items:center !important;
     height:120px;
     width:2px;
+}
+.contact h1{
+    text-align:center;
+    font-family: 'Baloo Tammudu 2', cursive;
+    color: #129DB0;
+    font-size:44px;
+    margin-bottom:0;
+}
+.contact span{
+    border-bottom:4px solid grey;
+}
+.hamburger{
+    display:none;
+    position:absolute;
+    width: 100%;
+    height:100vh;
+    background:rgba(20, 20, 20, 0.9);
+    z-index: 20;
+    justify-content:center;
+}
+.hamburger a{
+    color: white !important;
+}
+#close{
+    display:none;
+}
+@media screen and (max-width:870px){
+    .hamburger{
+        list-style: none;
+        position:fixed !important;
+        height:100vh !important;
+    }
+    nav{
+        display:none;
+    }
+    .hamburger li{
+        list-style: none;
+    }
+    .hamburger a{
+        text-decoration:none;
+        color:black;
+    }
+    .menu p{
+        width:20px;
+        height:2px;
+        background:black;
+        margin:8px;
+    }
+    .menu{
+        position:fixed;
+        width: 100%;
+        z-index: 30;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+    }
+    #hamburger_menu{
+        background:rgb(199, 199, 199,0.6);
+        padding:5px;
+        border-radius: 10px;
+        margin:4px;
+    }
+    .csi{
+        display:flex;
+        flex-direction:column;
+        background:none;
+        gap: 0;
+        padding: 0;
+        height:fit-content;
+    }
+    .csi h1{
+        color:#129DB0;
+        font-size:42px;
+    }
+    .about-team h2{
+        margin:0;
+    }
+    .about-team{
+        width:100%;
+        margin: 20px 0;
+    }
+    .about-team p{
+        margin: 10px;
+        padding: 3px;
+    }
+    .faculty_profile img{
+        width:200px;
+        height:300px;   
+    }
+    .faculty_incharge{
+        background-size: 100% 75%;
+    }
+    .social_media{
+        display:flex;
+        gap: 40px;
+    }
+    .hamburger ul{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin:0;
+        text-align: center;
+        padding:none !important;
+    }
+    .hamburger li{
+        font-size:3rem;
+    }
+    #nav-heading{
+        list-style: none;
+        text-align: center;
+        position:relative;
+        margin:20px
+    }
+    #nav-heading a{
+        text-decoration:none;
+        color: black;
+        font-weight: bold;
+    }
+    .design_team{
+        background:url(https://dbdzm869oupei.cloudfront.net/img/sticker/preview/36973.png) no-repeat;
+        background-size:120% 100%;
+    }
 }
