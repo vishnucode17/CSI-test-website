@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <div class="loader">
+        <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="">
+    </div>
     <nav>
         <ul>
             <li id="nav-heading"><a href="">CSI RVITM</a></li>
@@ -46,13 +49,18 @@
     </div>
     <div class="csi">
         <h1>Meet the Team</h1>
+        <img src="images/team.svg" alt="" id="team_img">
         <div class="about-team">
             <h2>Our Team</h2>
             <p>Teamwork is the collaborative effort of a group to achieve a common goal or to complete a task in the
                 most effective and efficient way. This concept is seen within the greater framework of a team, which is
                 a group of interdependent individuals who work together towards a common goal.</p>
+                <div class="arrow" style="text-align:center;color:white;margin-top: 20px;">
+                    <h4>Scroll Down</h4>
+                    <i id="arrow" class="fas fa-arrow-down fa-3x"></i>
+                </div>
         </div>
-
+        
     </div>
     <h1 id="mentor">Our Mentors</h1>
     <div class="faculty_incharge">
@@ -208,13 +216,13 @@
         </div>
 
 
-        <h2><span id="website">Website Management Team <i class="fas fa-search"></i></span></h2>
+        <h2>Website Management Team </h2>
         <div class="secretary">
             <div class="faculty_profile">
                 <img src="images/naachiket.jpg" alt="">
                 <div class="profile_info">
                     <h3>Naachiket Pant</h3>
-                    <span>Website creation and Management Head</span>
+                    <span>Website creation and <br> Management Head</span>
                 </div>
             </div>
         </div>
@@ -223,14 +231,14 @@
                 <img src="images/tejas.jpeg" alt="">
                 <div class="profile_info">
                     <h3>Tejas Ganesh Joshi</h3>
-                    <span>Co-Website creation and Management Head</span>
+                    <span>Co-Website creation and<br> Management Head</span>
                 </div>
             </div>
             <div class="faculty_profile">
                 <img src="images/sharan.jpg" alt="">
                 <div class="profile_info">
                     <h3>Sharan Fredrick Peter</h3>
-                    <span>Co-Website creation and Management Head</span>
+                    <span>Co-Website creation and<br> Management Head</span>
                 </div>
             </div>
         </div>
@@ -295,20 +303,48 @@
             <a href=""><i class="fab fa-facebook fa-2x"></i></a>
             <a href=""><i class="fab fa-youtube fa-2x"></i></a>
         </div>
-        <div id="line3"></div>
+        <div id="line3">
+            <div id="Line3">
+
+            </div>
+        </div>
         <div class="contact">
             <h1><span>Contact Us</span></h1>
         </div>
-        <div class="form_location">
-            <div class="address">
-                <h1><i class="fas fa-map-marker-alt"></i></h1>
-                <div class="address">
-                    <h3>Address</h3>
-                    <p></p>
+        <div class="contactus">
+            <div class="form_location">
+                <div class="address-div">
+                    <i class="fas fa-map-marker-alt fa-3x"></i>
+                    <div class="address">
+                        <h3>Address</h3>
+                        <p>560076, Chaithanya Layout, 8th Phase,<br> J. P. Nagar, Bengaluru, Karnataka <br> 560076</p>
+                    </div>
+                </div>
+                <div class="mail-div">
+                    <i class="fas fa-envelope fa-3x"></i>
+                    <div class="mail">
+                        <h3>Email</h3>
+                        <a href="" id=emailto>csi2021generalbodyRV@rvei.edu.in</a>
+                    </div>
                 </div>
             </div>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea style="resize:none" cols="40" rows="5" placeholder="Type your message"></textarea>
+                    <div id="button">
+                        <button id="query-submit">Submit</button>
+                    </div>
+                </form>
+                
+            </div>
+            
         </div>
     </footer>
+    <div class="copyright">
+        <p>Copyright © 2021 by CSI RVITM, All rights reserved</p>
+    </div>
     <script src="team.js"></script>
 </body>
 

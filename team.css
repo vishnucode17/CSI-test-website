@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body{
     margin:0;
+    background: rgb(34, 34, 34);
+}
+.arrow{
+    display:none;
 }
 nav{
     width:100% 100%;
@@ -60,21 +65,24 @@ nav a{
     height: auto;
 }
 .faculty_profile{
-    background:grey;
+    background:rgba(0, 0, 0, 0.1);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    color: white;
     text-align: center;
-    overflow: hidden;
-    position: relative;
-    border-radius:10px;
-    margin:10px;
+    border-radius: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top:1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    align-items:center;
 }
 .profile_info{
     width: 100%;
-    padding: 15px 10px;
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    bottom: 0;
-    left: 0;
     text-align: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 8px 8px;
 }
 .profile_info h3{
     font-size: 22px;
@@ -82,6 +90,7 @@ nav a{
     letter-spacing: 1px;
     color: #fff;
     margin: 0 0 5px 0;
+    text-shadow:1px 2px rgb(92, 92, 92);
 }
 .profile_info span{
     display: block;
@@ -90,9 +99,14 @@ nav a{
 }
 .faculty_profile img{
     transition: all 0.5s ease-in-out 0s;
-    height:300px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 10px;
+    background:#129DB0;
 }
-.faculty_profile:hover img{ transform: scale(1.2); }
+.faculty_profile:hover img{ transform: scale(1.05); }
 .HOD_faculty{
     display:flex;
     justify-content:space-around;
@@ -123,7 +137,6 @@ nav a{
 .vice-president,.secretary,.joint-secretary{
     display:flex;
     justify-content:space-around;
-    margin:20px 0;
 }
 video{
     position:absolute;
@@ -133,19 +146,20 @@ video{
 .student_incharge h2{
     text-align:center;
     font-size:40px;
+    color: white;
+    background:#1b43bd;
 }
 .design_team{
-    background:url(images/design_bg.png) no-repeat;
-    background-size:100% 100%;
 }
 #website{
-    background: #0facf3;
     padding: 10px;
     border-radius: 10px;
 }
 .social_media_team{
-    background: url(images/social_media_bg.png) no-repeat;
-    background-size:100% 100%;
+}
+footer{
+    background: #e5e5e5;
+    font-family: 'Poppins', sans-serif;
 }
 .footer_heading{
     display:grid;
@@ -169,12 +183,16 @@ video{
     color:black;
 }
 #line3{
-    background:grey;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center !important;
-    height:120px;
-    width:2px;
+    width:100%;
+    margin-top:20px;
+}
+#Line3{
+    height:80px;
+    background:grey;
+    width: 2px;
 }
 .contact h1{
     text-align:center;
@@ -194,6 +212,7 @@ video{
     background:rgba(20, 20, 20, 0.9);
     z-index: 20;
     justify-content:center;
+    
 }
 .hamburger a{
     color: white !important;
@@ -201,7 +220,88 @@ video{
 #close{
     display:none;
 }
+.loader{
+    height:100vh;
+    display: none;
+    flex-direction: column;
+    justify-content:center;
+}
+.form_location{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.address-div,.mail-div{
+    display: flex;
+    gap: 30px;
+    margin: 10px;
+    align-items:center;
+}
+.address-div{
+    padding-left:10px;
+}
+.contactus{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+}
+.contact-form{
+    margin-top:30px;
+    width:100%;
+}
+.contact-form form{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height:100%;
+    gap: 30px;
+    width:100%;
+}
+.contact-form input,.contact-form textarea{
+    
+    margin-right:40px;
+    font-size:18px;
+    border-radius:10px;
+    background:none;
+    border: 1px solid black;
+    padding:5px 8px;
+    outline:none;
+}
+#query-submit{
+    background:#4a4a4a;
+    outline:none;
+    border:none;
+    font-size:18px;
+    padding:5px 16px;
+    border-radius:10px;
+    color: white;
+}
+#emailto{
+    text-decoration: none;
+    color: black;
+}
+.copyright{
+    bottom:0;
+    background:black;
+    color: white;
+    margin:0;
+    padding: 3px;
+    text-align: center;
+}
+#team_img{
+    display:none;
+}
 @media screen and (max-width:870px){
+    #team_img{
+        display:initial;
+        width: 100%;
+    }
+    .arrow{
+        display:initial;
+    }
     .hamburger{
         list-style: none;
         position:fixed !important;
@@ -243,33 +343,45 @@ video{
         background:none;
         gap: 0;
         padding: 0;
-        height:fit-content;
+        height:100vh;
     }
     .csi h1{
         color:#129DB0;
         font-size:42px;
+        margin-top:20px;
     }
     .about-team h2{
         margin:0;
+        color:#fff;
     }
     .about-team{
         width:100%;
         margin: 20px 0;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
     }
     .about-team p{
         margin: 10px;
         padding: 3px;
+        color:white;
+        text-shadow: none;
+    }
+    .faculty_profile{
+        display:flex;
+        gap: 10px;
+        
+        
     }
     .faculty_profile img{
-        width:200px;
-        height:300px;   
+        width:150px;
+        height:150px;  
     }
     .faculty_incharge{
-        background-size: 100% 75%;
+        background: rgb(41, 41, 41);
     }
     .social_media{
         display:flex;
-        gap: 40px;
     }
     .hamburger ul{
         height: 100vh;
@@ -297,5 +409,34 @@ video{
     .design_team{
         background:url(https://dbdzm869oupei.cloudfront.net/img/sticker/preview/36973.png) no-repeat;
         background-size:120% 100%;
+    }
+    .HOD_faculty,.associate_faculty{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .vice-president,.joint-secretary{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 20px 10px;
+    }
+    .social_media{
+        display:flex;
+        width: 100%;
+        justify-content:space-between;
+        gap: 0;
+    }
+    .contactus{
+        display:flex;
+        flex-direction:column;
+    }
+    .contact-form input,.contact-form textarea{
+        margin: 10px !important;
+    }
+    #button{
+        display:flex;
+        justify-content:center;
+        margin-bottom:10px;
     }
 }

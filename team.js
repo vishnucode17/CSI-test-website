@@ -11,3 +11,13 @@ var hamburger = document.getElementsByClassName('hamburger')[0];
           hamburger.style.textAlign='center';
         }
       }
+var arrow = document.getElementById('arrow');
+var arrow_visible = ()=>{
+  if (arrow.style.visibility=='hidden'){
+    arrow.style.visibility = 'visible';
+  }
+  else{
+    arrow.style.visibility = 'hidden';
+  }
+}
+window.setInterval(arrow_visible,500)
