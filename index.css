@@ -142,6 +142,8 @@ nav li a{
       text-align: center;
       color: white;
       padding: 5px;
+      color: rgb(69, 164, 241);
+      text-shadow: 2p 2px black;
   }
   .HOD,.co-head{
       display:flex;
