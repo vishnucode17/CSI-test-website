@@ -16,13 +16,32 @@
         <nav>
             <ul>
                 <li><a href=""><img id="logo" src="images/favicon.png" alt=""></a></li>
-                <li><a href="">CSI RVITM</a></li>
-                <li><a href="" id="team">Team</a></li>
-                <li><a href="">Events</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">News</a></li>
+                <li class='toggle'><a href="">CSI RVITM</a></li>
+                <li class='toggle'><a href="" id="team">Team</a></li>
+                <li class='toggle'><a href="">Events</a></li>
+                <li class='toggle'><a href="">Blog</a></li>
+                <li class='toggle'><a href="">News</a></li>
+                <div class="menu">
+                    <li><a href=""><img id="logo1" src="images/favicon.png" alt=""></a></li>
+                    <div id="hamburger_menu" onclick=show_menu()>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    
+                </div>
             </ul>
+            
         </nav>
+        <div class="hamburger">
+        
+            <ul class="nav-menu">
+                <li class="nav-links"><a href="">Blog</a> </li>
+                <li class="nav-links"><a href="">Events</a></li>
+                <li class="nav-links"><a href="">News</a></li>
+                <li class="nav-links"><a href="">Team</a></li>
+            </ul>
+        </div>
         <div class="team_intro">
             <img src="images/team.svg" alt="">
             <h1 id=welcome_h1><span id="welcome"><span id="welcome_color">Welcome to the</span> <br> <span>Team</span></h1>

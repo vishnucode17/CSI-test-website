@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 *{
     margin:0;
     padding:0;
@@ -17,7 +18,7 @@ body{
 }
 nav{
     height:60px;
-    padding:10px;
+    padding-top:10px;
 }
 nav ul{
     display:flex;
@@ -32,8 +33,19 @@ nav li a{
     text-decoration:none;
     font-family: 'Lato', sans-serif;
     font-size:18px;
+    padding:10px;
+    transition: all 0.5s ease-in-out 0s;
+}
+.toggle a:hover{
+    color:black;
+    font-weight:bold;
+    text-decoration: underline;
 }
 #logo{
+    width:60px;
+    display: none;
+}
+#logo1{
     width:60px;
 }
 #welcome{
@@ -217,14 +229,10 @@ nav li a{
     display:none;
     position:absolute;
     width: 100%;
-    height:100vh;
     background:rgba(20, 20, 20, 0.9);
     z-index: 20;
     justify-content:center;
     
-}
-.hamburger a{
-    color: white !important;
 }
 #close{
     display:none;
@@ -313,16 +321,149 @@ h2{
     letter-spacing: 5px;
     padding:10px;
 }
+.menu{
+    display:none;
+}
+.hamburger{
+    display:none;
+    position:fixed;
+    width: 100%;
+    background:rgba(20, 20, 20, 0.9);
+    z-index: 20;
+    justify-content:center;
+    
+}
+.nav-menu a{
+    font-size:45px;
+    color:white;
+    text-decoration:none;
+    font-family: 'Oswald', sans-serif;    
+}
+.nav-menu{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 100%;
+}
   /*Shrinking for mobile*/
   @media (max-width: 768px) {
-    .waves {
-      height:40px;
-      min-height:40px;
+      .hamburger{
+          bottom:0;
+          top: 0;
+      }
+      .nav-links a:hover{
+          color: #129DB0;
+      }
+    .toggle{
+        display:none;
     }
-    .content {
-      height:30vh;
+    nav ul{
+        display:flex;
+        justify-content:space-between;
+        position:fixed;
+        z-index:100;
     }
-    h1 {
-      font-size:24px;
+    .team_intro{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        gap:50px;
+        height:100%;
     }
+    #welcome{
+        font-size:44px;
+        border:none;
+    }
+    .waves{
+        width: 100%;
+        height:30%;
+        object-fit: cover;
+        z-index:-10;
+    }
+    .profile_img{
+        width:120px;
+        height:120px; 
+    }
+    .profile{
+        display:flex;
+        gap: 10px;
+    }
+    .profile_info{
+        width: 100%;
+        text-align: center;
+        padding: 8px 8px;
+    }
+    .profile_designation{
+        font-size: 18px;
+    }
+    .HOD,.co-head{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin:5px;
+    }
+    .profile_title_span{
+        font-size:35px;
+        margin-top:20px;
+    }
+    .profile_name{
+        font-weight: bold;
+    }
+    .contactus{
+        display:flex;
+        flex-direction:column;
+    }
+    .contact-form input,.contact-form textarea{
+        margin: 10px !important;
+    }
+    #button{
+        display:flex;
+        justify-content:center;
+        margin-bottom:10px;
+    }
+    .social_media{
+        display:flex;
+        justify-content:space-between;
+        width:100%;
+        gap:0;
+    }
+    .hamburger li{
+        list-style: none;
+    }
+    .hamburger a{
+        text-decoration:none;
+        color:white;
+    }
+    .menu p{
+        width:20px;
+        height:2px;
+        background:black;
+    }
+    .menu{
+        position:fixed;
+        width: 100%;
+        z-index: 30;
+        display: flex;
+        justify-content: space-between;
+        top: 10px;
+    }
+    #hamburger_menu{
+        background:rgb(199, 199, 199,0.6);
+        padding:5px;
+        border-radius: 10px;
+        margin:4px;
+        cursor: pointer;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        width:30px;
+        align-items:center;
+        height:30px;
   }
+  .mail-div{
+    display: flex;
+    gap: 20px;
+    margin-left: 14px;
+    align-items:center;
+}
+}
