@@ -43,7 +43,6 @@ nav li a{
 }
 #logo{
     width:60px;
-    display: none;
 }
 #logo1{
     width:60px;
@@ -347,6 +346,9 @@ h2{
 }
   /*Shrinking for mobile*/
   @media (max-width: 768px) {
+    #logo{
+        display: none;
+    }
       .hamburger{
           bottom:0;
           top: 0;
